@@ -1,5 +1,5 @@
 Highcharts.getJSON(
-    'http://10.27.114.46:8080/data/range.json',
+    'http://localhost:8080/data/range.json',
     function (data) {
 
         Highcharts.chart('container', {
