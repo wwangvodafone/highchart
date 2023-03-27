@@ -84,13 +84,13 @@ $(document).ready(function() {
     }
     gallery = [];
     gallery[0] = {
-      full: "http://10.27.114.46:3000/data"
+      full: "http://localhost:3000/data"
     }
     gallery[1] = {
-      full: "http://10.27.114.46:3000/data?value=1"
+      full: "http://localhost:3000/data?value=1"
     }
     gallery[2] = {
-        full: "http://10.27.114.46:3000/data?value=2"
+        full: "http://localhost:3000/data?value=2"
       }
     counter = 0;
     $("#button").click( function() {
