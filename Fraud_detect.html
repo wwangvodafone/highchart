@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <style>
+
+    </style>
+    <link rel="stylesheet" href="./css/highcharter.css"></link>
+    <script src="./highcharts/highcharts.js"></script>
+    <script src="./highcharts/jquery-3.6.4.min.js"></script>
+    <script src="./highcharts/modules/data.js"></script>
+
+
+    <script src="./highcharts/modules/accessibility.js"></script>
+
+    <body  onload="updateDB();">
+        <div id="container" style="width:100%; height:400px;"></div>
+        <script type="text/javascript" src="./js/fraud_detect.js"></script>
+        <script>
+        function updateDB() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", "http://10.27.114.46:3000/data", true);
+            xhr.send(null);
+            /* ignore result */
+        }
+        </script>
+        <div class="center">
+            <button class="btn" id="button">Change to Logarithmic</button>
+
+    </body>
+</html>

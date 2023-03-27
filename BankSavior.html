@@ -1,0 +1,1166 @@
+
+<!-- saved from url=(0047)https://35.76.179.145/savior/AccountListForm.do -->
+<html><head xmlns:thex="http://www.stylez.co.jp"><meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+<script src="./highcharts/highcharts.js"></script>
+<script src="./highcharts/modules/data.js"></script>
+<script src="./highcharts/modules/exporting.js"></script>
+<script src="./highcharts/jquery-3.6.4.min.js"></script>
+<script src="https://35.76.179.145/savior/webjars/jquery/3.4.1/jquery.min.js"></script>
+<link href="https://35.76.179.145/savior/webjars/jquery-ui/1.12.1/jquery-ui.min.css" rel="stylesheet">
+<script src="https://35.76.179.145/savior/webjars/jquery-ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="https://35.76.179.145/savior/monitor.css" type="text/css">
+<link rel="shortcut icon" href="https://35.76.179.145/savior/favicon.ico">
+<title>BankSavior - 口座検索</title>
+<script type="text/javascript" src="https://35.76.179.145/savior/main.js"></script>
+<meta charset="utf-8">
+</head>
+<body onunload="wclose()">
+<table class="win">
+	<tbody><tr>
+		
+		<td class="back" style="width:0%">
+			<div id="menu" style="display:block;height:100%">
+				<!--?xml version="1.0" encoding="windows-31j"?-->
+
+
+
+
+
+
+<table class="menu" cellspacing="0">
+	
+	<tbody><tr>
+		<td style="text-align:center">
+				
+				
+
+				
+				
+					<a href="https://35.76.179.145/savior/MainMenu.do" onfocus="this.blur()">
+						<img src="https://35.76.179.145/savior/image/logo.gif" border="0" alt="メニュー画面を表示します" title="メニュー画面を表示します"></a>
+				
+		</td>
+	</tr>
+
+	<tr><td style="height:10px"></td></tr>
+
+	
+	<tr><td class="back">
+	<input id="monitoring_check" type="checkbox" class="menu_check" onclick="clickCheckBox(&#39;0&#39;)" checked="checked">
+	<label class="menu_label" for="monitoring_check"><img src="https://35.76.179.145/savior/image/tool_monitoring.gif"></label>
+	</td></tr>
+
+	
+	<tr class="monitoring_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				
+				
+
+				
+				
+					<a href="https://35.76.179.145/savior/MonitoringTransListForm.do?dashboard=false" onmouseover="imgOn(&#39;mc1-1&#39;)" onmouseout="imgOff(&#39;mc1-1&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_monitoring.gif" id="mc1-1" border="0"></a>
+				
+			
+		</td>
+	</tr>
+
+	
+	<tr class="monitoring_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/AccountListForm.do" onmouseover="imgOn(&#39;mc1-2&#39;)" onmouseout="imgOff(&#39;mc1-2&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_search.gif" id="mc1-2" border="0"></a>
+			
+		</td>
+	</tr>
+
+	
+	<tr class="monitoring_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/FraudAccountListForm.do" onmouseover="imgOn(&#39;mc1-3&#39;)" onmouseout="imgOff(&#39;mc1-3&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_fraud.gif" id="mc1-3" border="0"></a>
+			
+		</td>
+	</tr>
+
+	
+	<tr class="monitoring_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/TransactionListForm.do" onmouseover="imgOn(&#39;mc1-4&#39;)" onmouseout="imgOff(&#39;mc1-4&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_trans_search.gif" id="mc1-4" border="0"></a>
+			
+		</td>
+	</tr>
+
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr><td class="back">
+	<input id="rule_check" type="checkbox" class="menu_check" onclick="clickCheckBox(&#39;1&#39;)" checked="checked">
+	<label for="rule_check"><img src="https://35.76.179.145/savior/image/tool_rule.gif"></label>
+	</td></tr>
+
+	
+	<tr class="rule_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/FraudPatternList.do" onmouseover="imgOn(&#39;mc2-1&#39;)" onmouseout="imgOff(&#39;mc2-1&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_pattern.gif" id="mc2-1" border="0"></a>
+			
+		</td>
+	</tr>
+
+	
+	<tr class="rule_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				
+				
+
+				
+				
+					<img src="https://35.76.179.145/savior/image/tool_ch_rulerelease_off.gif">
+				
+			
+		</td>
+	</tr>
+
+	
+	<tr class="rule_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/CoFraudPatternList.do" onmouseover="imgOn(&#39;mc2-3&#39;)" onmouseout="imgOff(&#39;mc2-3&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_cooperation.gif" id="mc2-3" border="0"></a>
+			
+		</td>
+	</tr>
+
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr><td class="back">
+	<input id="records_check" type="checkbox" class="menu_check" onclick="clickCheckBox(&#39;2&#39;)" checked="checked">
+	<label for="records_check"><img src="https://35.76.179.145/savior/image/tool_records.gif"></label>
+	</td></tr>
+
+	
+	<tr class="records_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/UserRecordsListForm.do" onmouseover="imgOn(&#39;mc3-1&#39;)" onmouseout="imgOff(&#39;mc3-1&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_user_rec.gif" id="mc3-1" border="0"></a>
+			
+		</td>
+	</tr>
+
+	
+	<tr class="records_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/RuleRecordsListForm.do" onmouseover="imgOn(&#39;mc3-2&#39;)" onmouseout="imgOff(&#39;mc3-2&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_rule_rec.gif" id="mc3-2" border="0"></a>
+			
+		</td>
+	</tr>
+
+	
+	<tr class="records_disp" style="display: block;">
+		<td class="back">
+			
+			
+
+			
+			
+				<a href="https://35.76.179.145/savior/SimResultListForm.do" onmouseover="imgOn(&#39;mc3-4&#39;)" onmouseout="imgOff(&#39;mc3-4&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_sim_result.gif" id="mc3-4" border="0"></a>
+			
+		</td>
+	</tr>
+
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr><td class="back">
+	<input id="security_check" type="checkbox" class="menu_check" onclick="clickCheckBox(&#39;3&#39;)" checked="checked">
+	<label for="security_check"><img src="https://35.76.179.145/savior/image/tool_security.gif"></label>
+	</td></tr>
+
+	
+	
+	
+		
+		<tr class="security_disp" style="display: block;">
+			<td class="back">
+				
+				
+
+				
+				
+					<a href="https://35.76.179.145/savior/UserGroupList.do" onmouseover="imgOn(&#39;mc4-3&#39;)" onmouseout="imgOff(&#39;mc4-3&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_user.gif" id="mc4-3" border="0"></a>
+				
+			</td>
+		</tr>
+	
+
+	
+	
+	
+		<tr class="security_disp" style="display: block;">
+			<td class="back">
+				
+				
+
+				
+				
+					<a href="https://35.76.179.145/savior/OperationLogListForm.do" onmouseover="imgOn(&#39;mc4-2&#39;)" onmouseout="imgOff(&#39;mc4-2&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_log.gif" id="mc4-2" border="0"></a>
+				
+			</td>
+		</tr>
+	
+
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr><td class="back">
+	<input id="master_check" type="checkbox" class="menu_check" onclick="clickCheckBox(&#39;4&#39;)" checked="checked">
+	<label for="master_check"><img src="https://35.76.179.145/savior/image/tool_master.gif"></label>
+	</td></tr>
+
+	
+	<tr class="master_disp" style="display: block;">
+		<td class="back">
+		
+		
+
+		
+		
+			<a href="https://35.76.179.145/savior/ImportFileAction.do" onmouseover="imgOn(&#39;mc5-1&#39;)" onmouseout="imgOff(&#39;mc5-1&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_file_import.gif" id="mc5-1" border="0"></a>
+		
+		</td>
+	</tr>
+
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr><td class="back">
+	<input id="case_check" type="checkbox" class="menu_check" onclick="clickCheckBox(&#39;5&#39;)" checked="checked">
+	<label for="case_check"><img src="https://35.76.179.145/savior/image/tool_case.gif"></label>
+	</td></tr>
+
+	
+
+
+		
+
+			
+
+				
+
+					
+
+				
+
+			
+
+		
+
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/DealListAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-1&#39;)" onmouseout="imgOff(&#39;menu5-1&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_alertlist.gif" name="menu5-1" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/CaseListAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-4&#39;)" onmouseout="imgOff(&#39;menu5-4&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_caselist.gif" name="menu5-4" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/OutputReportAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-6&#39;)" onmouseout="imgOff(&#39;menu5-6&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_outputreport.gif" name="menu5-6" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/ResultStatusListAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-2&#39;)" onmouseout="imgOff(&#39;menu5-2&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_statuslist.gif" name="menu5-2" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/ResultUserListAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-3&#39;)" onmouseout="imgOff(&#39;menu5-3&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_userlist.gif" name="menu5-3" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/ResultStatusCntAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-8&#39;)" onmouseout="imgOff(&#39;menu5-8&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_statuscnt.gif" name="menu5-8" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+	
+	<tr class="case_disp" style="display: block;">
+		<td class="back">
+		
+			<a href="https://35.76.179.145/savior/AddCommoninfoAction.do?menuFlg=1" onmouseover="imgOn(&#39;menu5-5&#39;)" onmouseout="imgOff(&#39;menu5-5&#39;)" onfocus="this.blur()">
+				<img src="https://35.76.179.145/savior/image/tool_ch_aml_commoninfo.gif" name="menu5-5" border="0"></a>
+		
+		
+		</td>
+	</tr>
+
+
+	<tr><td style="height:50px"></td></tr>
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr>
+		<td class="back">
+			
+			
+
+			
+			
+				
+				
+
+				
+				
+					<a href="https://35.76.179.145/savior/RuleLock.do" onmouseover="imgOn(&#39;mc9-1&#39;)" onmouseout="imgOff(&#39;mc9-1&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_ruleedit.gif" id="mc9-1" border="0"></a>
+				
+			
+		</td>
+	</tr>
+
+	<tr><td style="height:5px"></td></tr>
+
+	
+	<tr>
+		<td class="back">
+			
+			
+
+			
+			<form name="logout_form" action="https://35.76.179.145/savior/logout" method="post">
+			
+					<a href="javascript:logout_form.submit()" onmouseover="imgOn(&#39;mc9-2&#39;)" onmouseout="imgOff(&#39;mc9-2&#39;)" onfocus="this.blur()"><img src="https://35.76.179.145/savior/image/tool_ch_logout.gif" id="mc9-2" border="0"></a>
+			
+			</form>
+		</td>
+	</tr>
+
+	<tr><td style="height:100%"></td></tr>
+</tbody></table>
+
+<script type="text/javascript">
+<!--
+if(getCookie("menu") == 'none'){
+	document.getElementById("menu").style.display="none";
+}else{
+	document.getElementById("menu").style.display="block";
+}
+var idCheckBox = new Array("monitoring_check", "rule_check", "records_check", "security_check", "master_check", "case_check");
+var idClassName = new Array("monitoring_disp", "rule_disp", "records_disp", "security_disp", "master_disp", "case_disp");
+var arrMenuCheck = new Array("ON", "ON", "ON", "ON", "ON", "ON");
+
+function clickCheckBox(idx){
+	$("." + idClassName[idx]).each(function(i, menuElements) {
+		if($('#' + idCheckBox[idx]).prop('checked') == false) {
+			menuElements.style.display="none";
+			arrMenuCheck[idx] = "OFF";
+		} else {
+			menuElements.style.display="block";
+			arrMenuCheck[idx] = "ON";
+		}
+	});
+	sessionStorage.setItem('menuCheck', arrMenuCheck.toString());
+}
+
+$(document).ready(function(){
+	var strMenuCheck = sessionStorage.getItem('menuCheck');
+
+	if(strMenuCheck != null){
+		arrMenuCheck = strMenuCheck.split(',');
+	}
+
+	for (var i = 0, len = arrMenuCheck.length; i < len; i++) {
+		if(arrMenuCheck[i] == "OFF") {
+			$('#' + idCheckBox[i]).prop('checked', false);
+		} else {
+			$('#' + idCheckBox[i]).prop('checked', true);
+		}
+		clickCheckBox(i);
+	}
+});
+
+//-->
+</script>
+
+<!--[if lte IE 8]>
+<script type="text/javascript">
+$(function () {
+    $('label > img').click(function () {
+        $('#'+$(this).parent().attr('for') ).focus().click();
+    });
+});
+</script>
+<![endif]-->
+
+
+			</div>
+		</td>
+		
+		<td class="back" style="width:5px">
+			<a href="javascript:menu();"><img src="https://35.76.179.145/savior/image/menu_click.gif" border="0"></a>
+		</td>
+		<td class="back" style="width:100%">
+			<table class="win" cellspacing="0" cellpadding="0">
+				
+				<tbody><tr>
+					<td style="height:5px">
+						<table class="title" border="0" cellspacing="0" cellpadding="0">
+							<tbody><tr class="title">
+								
+								<td style="padding:2px">口座検索</td>
+								
+								<td style="text-align:right;padding:0px;text-align:right"> </td>
+							</tr>
+						</tbody></table>
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="back" style="height:0px;text-align:center">
+						<!--?xml version="1.0" encoding="windows-31j"?-->
+
+
+
+
+
+
+
+
+
+
+					</td>
+				</tr>
+				
+				<tr>
+					<td class="back" style="text-align:center;height:100%">
+						<!--?xml version="1.0" encoding="windows-31j"?-->
+
+
+
+
+
+<script type="text/javascript">
+
+function changeEnableCondition(){
+
+	
+	if (document.getElementById('exsearchFlg').checked) {
+		var exContractNo = document.getElementById('contractNo');
+		var exKanaNm = document.getElementById('kanaNm');
+		//var exBirthdayCal = document.getElementById('birthdayCal');
+		var exBirthdayYear = document.getElementById('birthdayYear');
+		var exBirthdayMonth = document.getElementById('birthdayMonth');
+		var exBirthdayDay = document.getElementById('birthdayDay');
+
+		exContractNo.style.background="#bbbbbb";
+		exKanaNm.style.background="#bbbbbb";
+		//exBirthdayCal.style.background="#bbbbbb";
+		exBirthdayYear.style.background="#bbbbbb";
+		exBirthdayMonth.style.background="#bbbbbb";
+		exBirthdayDay.style.background="#bbbbbb";
+
+		exContractNo.value = "";
+		exKanaNm.value = "";
+		exBirthdayYear.value = "";
+		exBirthdayMonth.value = "";
+		exBirthdayDay.value = "";
+
+		exContractNo.disabled = true;
+		exKanaNm.disabled = true;
+		//exBirthdayCal.disabled = true;
+		exBirthdayYear.disabled = true;
+		exBirthdayMonth.disabled = true;
+		exBirthdayDay.disabled = true;
+
+		document.accountListForm.antiSocialFlg.disabled = true;
+		document.accountListForm.frozenAccountFlg.disabled = true;
+		document.accountListForm.sanctionFlg.disabled = true;
+		document.accountListForm.otherFlg.disabled = true;
+		document.accountListForm.antiSocialFlg.checked = false;
+		document.accountListForm.frozenAccountFlg.checked = false;
+		document.accountListForm.sanctionFlg.checked = false;
+		document.accountListForm.otherFlg.checked = false;
+
+		
+		try {
+			var exScoreRank = document.getElementById('scoreRank');
+			exScoreRank.style.background="#bbbbbb";
+			exScoreRank.value = "";
+			exScoreRank.disabled = true;
+		} catch (e) {}
+		try {
+			document.accountListForm.checkFlg1.disabled = true;
+			document.accountListForm.checkFlg1.checked = false;
+		} catch (e) {}
+		try {
+			document.accountListForm.checkFlg2.disabled = true;
+			document.accountListForm.checkFlg2.checked = false;
+		} catch (e) {}
+		try {
+			document.accountListForm.checkFlg3.disabled = true;
+			document.accountListForm.checkFlg3.checked = false;
+		} catch (e) {}
+		try {
+			document.accountListForm.checkFlg4.disabled = true;
+			document.accountListForm.checkFlg4.checked = false;
+		} catch (e) {}
+		try {
+			var exTodokedeFlg = document.getElementById('todokedeFlg');
+			exTodokedeFlg.value = "";
+			exTodokedeFlg.disabled = true;
+		} catch (e) {}
+		try {
+			document.accountListForm.todokedeUmu.disabled = true;
+			document.accountListForm.todokedeUmu.checked = false;
+		} catch (e) {}
+		var exScoreRank = document.getElementById('scoreRank');
+		var exKeizokuKanshiTyp = document.getElementById('keizokuKanshiTyp');
+		var exElapsedDays = document.getElementById('elapsedDays');
+		var exElapsedDaysIjouIka = document.getElementById('elapsedDaysIjouIka');
+		exScoreRank.style.background="#bbbbbb";
+		exKeizokuKanshiTyp.style.background="#bbbbbb";
+		exTodokedeFlg.style.background="#bbbbbb";
+		exElapsedDays.style.background="#bbbbbb";
+		exElapsedDaysIjouIka.style.background="#bbbbbb";
+		exScoreRank.value = "";
+		exKeizokuKanshiTyp.value = "";
+		exElapsedDays.value = "";
+		exElapsedDaysIjouIka.value = "1";
+		exKeizokuKanshiTyp.disabled = true;
+		exElapsedDays.disabled = true;
+		exElapsedDaysIjouIka.disabled = true;
+		
+
+		
+		var exCsvBtn = document.getElementById('csvBtn');
+		exCsvBtn.src = "image/btn_download_csv_off.gif";
+		exCsvBtn.disabled = true;
+		
+
+		if (document.getElementById('riskCheckBoxR') != null) {
+			document.getElementById('riskCheckBoxR').disabled = true;
+		}
+		if (document.getElementById('riskCheckBoxG') != null) {
+			document.getElementById('riskCheckBoxG').disabled = true;
+		}
+		if (document.getElementById('riskCheckBoxP') != null) {
+			document.getElementById('riskCheckBoxP').disabled = true;
+		}
+		if (document.getElementById('riskCheckBoxU') != null) {
+			document.getElementById('riskCheckBoxU').disabled = true;
+		}
+
+	
+	} else {
+		resetSearchCondition();
+	}
+}
+
+function resetSearchCondition() {
+	var exContractNo = document.getElementById('contractNo');
+	var exKanaNm = document.getElementById('kanaNm');
+	//var exBirthdayCal = document.getElementById('birthdayCal');
+	var exBirthdayYear = document.getElementById('birthdayYear');
+	var exBirthdayMonth = document.getElementById('birthdayMonth');
+	var exBirthdayDay = document.getElementById('birthdayDay');
+
+	exContractNo.style.background="#ffffff";
+	exKanaNm.style.background="#ffffff";
+	//exBirthdayCal.style.background="#ffffff";
+	exBirthdayYear.style.background="#ffffff";
+	exBirthdayMonth.style.background="#ffffff";
+	exBirthdayDay.style.background="#ffffff";
+
+	exContractNo.disabled = false;
+	exKanaNm.disabled = false;
+	//exBirthdayCal.disabled = false;
+	exBirthdayYear.disabled = false;
+	exBirthdayMonth.disabled = false;
+	exBirthdayDay.disabled = false;
+
+	document.accountListForm.antiSocialFlg.disabled = false;
+	document.accountListForm.frozenAccountFlg.disabled = false;
+	document.accountListForm.sanctionFlg.disabled = false;
+	document.accountListForm.otherFlg.disabled = false;
+
+	
+	try {
+		var exScoreRank = document.getElementById('scoreRank');
+		exScoreRank.style.background="#ffffff";
+		exScoreRank.disabled = false;
+	} catch (e) {}
+	try {
+		document.accountListForm.checkFlg1.disabled = false;
+	} catch (e) {}
+	try {
+		document.accountListForm.checkFlg2.disabled = false;
+	} catch (e) {}
+	try {
+		document.accountListForm.checkFlg3.disabled = false;
+	} catch (e) {}
+	try {
+		document.accountListForm.checkFlg4.disabled = false;
+	} catch (e) {}
+	try {
+		var exTodokedeFlg = document.getElementById('todokedeFlg');
+		exTodokedeFlg.disabled = false;
+	} catch (e) {}
+	try {
+		document.accountListForm.todokedeUmu.disabled = false;
+	} catch (e) {}
+	var exKeizokuKanshiTyp = document.getElementById('keizokuKanshiTyp');
+	var exElapsedDays = document.getElementById('elapsedDays');
+	var exElapsedDaysIjouIka = document.getElementById('elapsedDaysIjouIka');
+	exKeizokuKanshiTyp.style.background="#ffffff";
+	exTodokedeFlg.style.background="#ffffff";
+	exElapsedDays.style.background="#ffffff";
+	exElapsedDaysIjouIka.style.background="#ffffff";
+	exKeizokuKanshiTyp.disabled = false;
+	exElapsedDays.disabled = false;
+	exElapsedDaysIjouIka.disabled = false;
+	
+
+	
+	var exCsvBtn = document.getElementById('csvBtn');
+	exCsvBtn.src = "image/btn_download_csv.gif";
+	exCsvBtn.disabled = false;
+	
+
+	if (document.getElementById('riskCheckBoxR') != null) {
+		document.getElementById('riskCheckBoxR').disabled = false;
+	}
+	if (document.getElementById('riskCheckBoxG') != null) {
+		document.getElementById('riskCheckBoxG').disabled = false;
+	}
+	if (document.getElementById('riskCheckBoxP') != null) {
+		document.getElementById('riskCheckBoxP').disabled = false;
+	}
+	if (document.getElementById('riskCheckBoxU') != null) {
+		document.getElementById('riskCheckBoxU').disabled = false;
+	}
+}
+
+
+function setEvent(eventName) {
+	var eve = document.getElementById("eventName");
+	eve.value = eventName;
+
+	
+	if (!document.getElementById('chkBranchCd').checked &&
+		!document.getElementById('chkAccountTyp').checked &&
+		!document.getElementById('chkAccountNo').checked &&
+		!document.getElementById('chkContractNo').checked &&
+		!document.getElementById('chkKanaNm').checked &&
+		!document.getElementById('chkBirthday').checked &&
+		!document.getElementById('chkMatchList').checked &&
+		!document.getElementById('chkScoreRank').checked &&
+		!document.getElementById('chkKeizokuKanshiTyp').checked &&
+		!document.getElementById('chkCheckFlg').checked &&
+		!document.getElementById('chkTodokedeFlg').checked &&
+		!document.getElementById('chkTodokedeUmu').checked &&
+		!document.getElementById('chkElapsedDays').checked) {
+		document.getElementById('branchCdFlg').value = "1";
+		document.getElementById('accountTypFlg').value = "1";
+		document.getElementById('accountNoFlg').value = "1";
+		document.getElementById('contractNoFlg').value = "1";
+		document.getElementById('kanaNmFlg').value = "1";
+		document.getElementById('birthdayFlg').value = "1";
+		document.getElementById('matchListFlg').value = "1";
+		document.getElementById('scoreRankFlg').value = "1";
+		document.getElementById('keizokuKanshiTypFlg').value = "1";
+		document.getElementById('checkFlgFlg').value = "1";
+		document.getElementById('todokedeFlgFlg').value = "1";
+		document.getElementById('todokedeUmuFlg').value = "1";
+		document.getElementById('elapsedDaysFlg').value = "1";
+	} else {
+		if (document.getElementById('chkBranchCd').checked) {
+			document.getElementById('branchCdFlg').value = "1";
+		} else {
+			document.getElementById('branchCdFlg').value = "0";
+		}
+		if (document.getElementById('chkAccountTyp').checked) {
+			document.getElementById('accountTypFlg').value = "1";
+		} else {
+			document.getElementById('accountTypFlg').value = "0";
+		}
+		if (document.getElementById('chkAccountNo').checked) {
+			document.getElementById('accountNoFlg').value = "1";
+		} else {
+			document.getElementById('accountNoFlg').value = "0";
+		}
+		if (document.getElementById('chkContractNo').checked) {
+			document.getElementById('contractNoFlg').value = "1";
+		} else {
+			document.getElementById('contractNoFlg').value = "0";
+		}
+		if (document.getElementById('chkKanaNm').checked) {
+			document.getElementById('kanaNmFlg').value = "1";
+		} else {
+			document.getElementById('kanaNmFlg').value = "0";
+		}
+		if (document.getElementById('chkBirthday').checked) {
+			document.getElementById('birthdayFlg').value = "1";
+		} else {
+			document.getElementById('birthdayFlg').value = "0";
+		}
+		if (document.getElementById('chkMatchList').checked) {
+			document.getElementById('matchListFlg').value = "1";
+		} else {
+			document.getElementById('matchListFlg').value = "0";
+		}
+		if (document.getElementById('chkScoreRank').checked) {
+			document.getElementById('scoreRankFlg').value = "1";
+		} else {
+			document.getElementById('scoreRankFlg').value = "0";
+		}
+		if (document.getElementById('chkKeizokuKanshiTyp').checked) {
+			document.getElementById('keizokuKanshiTypFlg').value = "1";
+		} else {
+			document.getElementById('keizokuKanshiTypFlg').value = "0";
+		}
+		if (document.getElementById('chkCheckFlg').checked) {
+			document.getElementById('checkFlgFlg').value = "1";
+		} else {
+			document.getElementById('checkFlgFlg').value = "0";
+		}
+		if (document.getElementById('chkTodokedeFlg').checked) {
+			document.getElementById('todokedeFlgFlg').value = "1";
+		} else {
+			document.getElementById('todokedeFlgFlg').value = "0";
+		}
+		if (document.getElementById('chkTodokedeUmu').checked) {
+			document.getElementById('todokedeUmuFlg').value = "1";
+		} else {
+			document.getElementById('todokedeUmuFlg').value = "0";
+		}
+		if (document.getElementById('chkElapsedDays').checked) {
+			document.getElementById('elapsedDaysFlg').value = "1";
+		} else {
+			document.getElementById('elapsedDaysFlg').value = "0";
+		}
+		if (document.getElementById('chkHighRiskCategory') != null) {
+			if (document.getElementById('chkHighRiskCategory').checked) {
+				document.getElementById('highRiskCategoryFlg').value = "1";
+			} else {
+				document.getElementById('highRiskCategoryFlg').value = "0";
+			}
+		}
+	}
+	
+}
+
+
+function download() {
+	if (confirm('ファイルのダウンロードを開始します。よろしいですか？')) {
+		setEvent('download');
+		return true;
+	}
+	return false;
+}
+
+
+
+
+function daysInput() {
+	var exElapsedDays = document.getElementById('elapsedDays');
+	var strDays = exElapsedDays.value;
+	if (!strDays) {
+		return ;
+	}
+	var numDays = Number(strDays);
+	if (!isNaN(numDays)) {
+		exElapsedDays.value = numDays;
+	}
+}
+
+
+<!-- /* 検索項目表示制御 */-->
+$(function(){
+
+	
+	$('#searchSelectColumn').hide();
+
+	
+	$('#searchSelect').on('click', function() {
+		if ($(this).prop('checked') == true) {
+			$('#searchSelectColumn').show();
+		} else {
+			$('#searchSelectColumn').hide();
+		}
+	});
+});
+
+
+</script>
+<table class="win" cellspacing="0" cellpadding="0">
+	<tbody><tr><td style="height:5px"></td></tr>
+
+	
+	<tr>
+		<td style="height:10px" class="center">
+			<table class="main" style="width:400px">
+				<form name="accountListForm" method="post" action="https://35.76.179.145/savior/AccountList.do" target="frmain"></form>
+				
+
+
+    
+
+
+				<input type="hidden" value="1" name="pageNo">
+				<input type="hidden" name="eventName" id="eventName">
+				
+				<input type="hidden" name="branchCdFlg" id="branchCdFlg">
+				<input type="hidden" name="accountTypFlg" id="accountTypFlg">
+				<input type="hidden" name="accountNoFlg" id="accountNoFlg">
+				<input type="hidden" name="contractNoFlg" id="contractNoFlg">
+				<input type="hidden" name="kanaNmFlg" id="kanaNmFlg">
+				<input type="hidden" name="birthdayFlg" id="birthdayFlg">
+				<input type="hidden" name="matchListFlg" id="matchListFlg">
+				<input type="hidden" name="scoreRankFlg" id="scoreRankFlg">
+				<input type="hidden" name="keizokuKanshiTypFlg" id="keizokuKanshiTypFlg">
+				<input type="hidden" name="checkFlgFlg" id="checkFlgFlg">
+				<input type="hidden" name="todokedeFlgFlg" id="todokedeFlgFlg">
+				<input type="hidden" name="todokedeUmuFlg" id="todokedeUmuFlg">
+				<input type="hidden" name="elapsedDaysFlg" id="elapsedDaysFlg">
+				<input type="hidden" value="0" name="denyAllAccountSearchFlg">
+				<input type="hidden" name="highRiskCategoryFlg" id="highRiskCategoryFlg">
+				
+				<tbody><tr><td colspan="4" class="header">検索条件</td></tr>
+					
+					<tr>
+						<td class="grid2">支店－口座番号</td>
+						<td class="grid"><input type="text" value="" name="branchCd" maxlength="3" class="branch">－<input type="text" value="" name="accountNo" maxlength="10" class="account"></td>
+
+					
+						<td class="grid2">契約者番号</td>
+						<td class="grid"><input type="text" value="" name="contractNo" id="contractNo" maxlength="16" class="contract_no"></td>
+					</tr>
+
+					
+					<tr>
+						<td class="grid2">カナ氏名</td>
+						<td class="grid"><input type="text" value="" name="kanaNm" id="kanaNm" maxlength="20" class="account_kana"></td>
+
+					
+						<td class="grid2">生年月日</td>
+						<td class="grid">
+							<input type="text" value="" name="birthdayYear" id="birthdayYear" maxlength="4" class="year">年<input type="text" value="" name="birthdayMonth" id="birthdayMonth" maxlength="2" class="month">月<input type="text" value="" name="birthdayDay" id="birthdayDay" maxlength="2" class="day">日
+						</td>
+					</tr>
+
+					
+					<tr>
+						<td class="grid2">表示</td>
+						<td colspan="3" class="grid">
+							
+							<select id="line" name="line">
+								<option value="100">100件</option>
+								<option value="200">200件</option>
+								<option value="300">300件</option>
+								<option value="400">400件</option>
+								<option value="500">500件</option>
+							</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="grid2">拡張検索</td>
+						<td colspan="3" class="grid">
+							
+							<input type="checkbox" name="exsearchFlg" value="1" id="exsearchFlg" onclick="changeEnableCondition()">オンにすると口座マスタから削除された口座を検索します
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="grid2">リストマッチ</td>
+						<td colspan="3" class="grid">
+							
+							
+								<input type="checkbox" name="antiSocialFlg" value="1">反社リスト
+								<input type="checkbox" name="frozenAccountFlg" value="1">凍結口座リスト
+								<input type="checkbox" name="sanctionFlg" value="1">制裁者リスト
+								<input type="checkbox" name="otherFlg" value="1">その他
+							
+							
+						</td>
+					</tr>
+					<!-- スコアランク -->
+					<tr>
+						
+							<td class="grid2">スコアランク</td>
+							<td class="grid">
+								<!-- スコアランク -->
+								<select name="scoreRank" id="scoreRank">
+									<option value="">指定なし</option>
+									<option value="-">未設定</option>
+									<option value="0">L</option>
+									<option value="1">M</option>
+									<option value="2">H</option>
+									<option value="3">VH</option>
+								</select>
+							</td>
+						
+					<!-- 継続監視区分 -->
+						<td class="grid2">継続監視区分</td>
+						<td class="grid">
+							<!-- 継続監視区分 -->
+							<select id="keizokuKanshiTyp" name="keizokuKanshiTyp">
+								<option value="">指定なし</option>
+								<option value="0">未設定</option>
+								<option value="1">スルー</option>
+								<option value="2">トレース</option>
+								<option value="3">ブロック</option>
+								<option value="4">永続スルー</option>
+								<option value="5">永続トレース</option>
+							</select>
+						</td>
+					</tr>
+					<!-- 利用体系チェックフラグ予備1-4 -->
+					
+						
+						<tr>
+							<td class="grid2">各種チェックフラグ</td>
+							<td colspan="3" class="grid">
+								<!-- 利用体系チェックフラグ予備1-4 -->
+								
+									<input type="checkbox" name="checkFlg1" value="1">利用体系チェックフラグ予備1
+								
+								
+									<input type="checkbox" name="checkFlg2" value="1">利用体系チェックフラグ予備2
+								
+								
+									<input type="checkbox" name="checkFlg3" value="1">利用体系チェックフラグ予備3
+								
+								
+									<input type="checkbox" name="checkFlg4" value="1">利用体系チェックフラグ予備4
+								
+							</td>
+						</tr>
+						
+					
+					<!-- 届出フラグ -->
+					
+					<tr>
+						
+							<td class="grid2">届出フラグ</td>
+							<td class="grid">
+								<!-- 届出フラグ -->
+								<select name="todokedeFlg" id="todokedeFlg">
+									<option value="">指定なし</option>
+									<option value="1">届出対象</option>
+									<option value="2">届出対象外</option>
+								</select>
+							</td>
+						
+					<!-- 疑わしい取引の届出実績有無 -->
+						
+							<td class="grid2">疑わしい取引の届出実績有無</td>
+							<td class="grid">
+								<!-- 疑わしい取引の届出実績有無 -->
+								<input type="checkbox" name="todokedeUmu" value="1">届出実績有り
+							</td>
+						
+					</tr>
+					
+					<!-- 最終取引日からの経過日数 -->
+					<tr>
+						<td class="grid2">最終取引日からの経過日数</td>
+						<td colspan="3" class="grid">
+							<input type="text" name="elapsedDays" id="elapsedDays" maxlength="5" size="5" onchange="daysInput();">日
+							<!-- 最終取引日からの経過日数 -->
+							<select name="elapsedDaysIjouIka" id="elapsedDaysIjouIka">
+								<option value="1">以上</option>
+								<option value="2">以下</option>
+							</select>
+						</td>
+					</tr>
+					<!-- 高リスク区分（めぶきFGのときのみ表示） -->
+					
+					
+					<tr>
+						<td class="grid2_c" colspan="4">
+							<table class="back" style="margin: auto;">
+								<tbody><tr>
+									<td><input type="image" id="button" src="https://35.76.179.145/savior/image/btn_search.gif" onclick="setEvent(&#39;search&#39;);"></td>
+									<td style="width:10px"></td>
+									<td>
+										<a href="javascript:document.forms[1].reset();" onclick="resetSearchCondition();"><img src="https://35.76.179.145/savior/image/btn_reset.gif" border="0"></a>
+									</td>
+									<td style="width:10px"></td>
+									
+									
+									
+									
+									<td>
+										<input type="image" src="https://35.76.179.145/savior/image/btn_download_csv.gif" name="csvBtn" id="csvBtn" onclick="return download();">
+									</td>
+									
+								</tr>
+							</tbody></table>
+						</td>
+					</tr>
+				
+				
+
+			<script type="text/javascript">
+			<!--
+			var formName = "accountListForm";
+			var focusControl = document.forms[formName].elements["branchCd"];
+			if (focusControl != null && focusControl.type != "hidden" && !focusControl.disabled && focusControl.style.display != "none") {
+				focusControl.focus();
+			}
+			// -->
+			</script>
+			</tbody></table>
+		</td>
+	</tr>
+
+	<tr><td class="back" style="height:10px"></td></tr>
+
+	<tr>
+		<td class="back" style="height:10px">
+			<table class="subtitle" style="width:100%" border="0" cellspacing="0" cellpadding="0">
+				<tbody><tr class="subtitle">
+					<td colspan="2"><label for="searchSelect"><input type="checkbox" id="searchSelect">口座検索結果一覧</label></td>
+				</tr>
+				
+				<tr id="searchSelectColumn" style="display: none;">
+					<td class="grid_t">検索結果表示項目</td>
+					<td class="grid_tl">
+						
+						<input type="checkbox" name="chkBranchCd" id="chkBranchCd" checked="">支店
+						<input type="checkbox" name="chkAccountTyp" id="chkAccountTyp" checked="">預金種目
+						<input type="checkbox" name="chkAccountNo" id="chkAccountNo" checked="">口座番号
+						<input type="checkbox" name="chkContractNo" id="chkContractNo" checked="">契約者番号
+						<input type="checkbox" name="chkKanaNm" id="chkKanaNm" checked="">カナ氏名
+						<input type="checkbox" name="chkBirthday" id="chkBirthday" checked="">生年月日
+						<input type="checkbox" name="chkMatchList" id="chkMatchList" checked="">マッチリスト
+						<input type="checkbox" name="chkScoreRank" id="chkScoreRank">スコアランク<br>
+						<input type="checkbox" name="chkKeizokuKanshiTyp" id="chkKeizokuKanshiTyp">継続監視区分
+						
+							<input type="checkbox" name="chkCheckFlg" id="chkCheckFlg">各種チェックフラグ
+						
+						
+						<input type="checkbox" name="chkTodokedeFlg" id="chkTodokedeFlg">届出フラグ
+						<input type="checkbox" name="chkTodokedeUmu" id="chkTodokedeUmu">届出実績有無
+						<input type="checkbox" name="chkElapsedDays" id="chkElapsedDays">最終取引日からの経過日数
+						
+					</td>
+				</tr>
+				<tr>
+					<div id="container" style="width:100%; height:400px;"></div>
+        			<script type="text/javascript" src="./js/banksavior.js"></script>
+				</tr>
+			</tbody></table>
+		</td>
+	</tr>
+
+	<tr><td class="back" style="height:5px"></td></tr>
+
+	
+	<tr>
+		<td class="back">
+			<iframe src="./BankSavior_files/Blank.html" name="frmain" scrolling="AUTO" frameborder="0" style="width:100%;height:100%"></iframe>
+		</td>
+	</tr>
+</tbody></table>
+
+					</td>
+				</tr>
+				
+				<tr>
+					<td style="height:10px">
+<!--  					<hr>
+						<div style="text-align:right">BankSavior ver1.0</div>
+-->				 </td>
+				</tr>
+				
+			</tbody></table>
+		</td>
+	</tr>
+</tbody></table>
+
+
+
+
+
+
+</body></html>
